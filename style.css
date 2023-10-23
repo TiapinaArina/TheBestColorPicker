@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "a m b"
+        "c m d"
+}
+
+.colorPicker {
+    grid-area: m;
+    height: 100vh;
+    width: 100%;
+}
+
+.block1,
+.block2,
+.block3,
+.block4 {
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+}
+
+.block1 {
+    grid-area: a;
+}
+
+.block2 {
+    grid-area: b;
+}
+
+.block3 {
+    grid-area: c;
+}
+
+.block4 {
+    grid-area: d;
+}
+
+.paragraph{
+    display: none;
+    position: absolute;
+    font-size: 5dvw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.paragraph-show{
+    display: block;
+}
